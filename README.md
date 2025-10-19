@@ -1,8 +1,9 @@
 # Profile Card
 
 A simple profile card website.
+**Live Site:** https://oluchiprofilecard.netlify.app/
 
-## How to Use
+## How to Run
 
 1. Download all 3 files (`index.html`, `style.css`, `script.js`)
 2. Put them in the same folder
@@ -23,3 +24,7 @@ Open `index.html` in Notepad and edit:
 - Your photo (line 18)
 
 That's it!
+
+## Author
+
+GitHub: [@luchiiii](https://github.com/luchiiii)
