@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card - Accessible Component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <article
+        data-testid="test-profile-card"
+        role="main"
+        aria-label="Profile card"
+      >
+        <div class="profile-content">
+          <header>
+            <figure>
+              <img
+                data-testid="test-user-avatar"
+                src="Oluchi.jpeg"
+                alt="Profile picture of Okwuosa Oluchi"
+              />
+            </figure>
+            <div class="header-text">
+              <h2 data-testid="test-user-name">Okwuosa Oluchi</h2>
+              <div class="time-display">
+                Current time:
+                <time data-testid="test-user-time" id="currentTime"></time>ms
+              </div>
+            </div>
+          </header>
+
+          <div class="bio-section">
+            <p data-testid="test-user-bio">
+              A passionate front-end developer with a love for creating
+              accessible, user-friendly web experiences. When not coding, you'll
+              find me watching skincare and fashion video, or diving into a good
+              african literature novel.
+            </p>
+          </div>
+
+          <nav
+            data-testid="test-user-social-links"
+            aria-label="Social media links"
+          >
+            <h3>Connect With Me</h3>
+            <ul class="social-list">
+              <li>
+                <a
+                  href="http://github.com/luchiiii"
+                  data-testid="test-user-social-github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit my GitHub profile"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/oluchi-okwuosa/"
+                  data-testid="test-user-social-linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit my LinkedIn profile"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/thatfavouredgirll?igsh=NnVvcDQ3cXVtYm5p&utm_source=qr"
+                  data-testid="test-user-social-instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit my Instagram profile"
+                >
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="lists-container">
+            <section aria-labelledby="hobbies-heading">
+              <h3 id="hobbies-heading">Hobbies & Interests</h3>
+              <ul data-testid="test-user-hobbies">
+                <li>Hiking and nature photography</li>
+                <li>Cooking international cuisines</li>
+                <li>Reading science fiction novels</li>
+                <li>Playing acoustic guitar</li>
+                <li>Practicing yoga and meditation</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="dislikes-heading">
+              <h3 id="dislikes-heading">Pet Peeves</h3>
+              <ul data-testid="test-user-dislikes">
+                <li>Inaccessible websites</li>
+                <li>Unnecessary meetings</li>
+                <li>Poor code documentation</li>
+                <li>Loud chewing sounds</li>
+                <li>Slow internet connections</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

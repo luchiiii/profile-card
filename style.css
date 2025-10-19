@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #514348 0%, #c9a7b5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.card-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+article[data-testid="test-profile-card"] {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(81, 67, 72, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+article[data-testid="test-profile-card"]:hover {
+    transform: translateY(-5px);
+}
+
+.profile-content {
+    display: grid;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Header section */
+header {
+    text-align: center;
+}
+
+figure {
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+}
+
+img[data-testid="test-user-avatar"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #c9a7b5;
+    box-shadow: 0 8px 20px rgba(81, 67, 72, 0.2);
+}
+
+h2[data-testid="test-user-name"] {
+    color: #514348;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.time-display {
+    color: #c9a7b5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+/* Bio section */
+.bio-section {
+    text-align: center;
+}
+
+p[data-testid="test-user-bio"] {
+    color: #514348;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Social links */
+nav[data-testid="test-user-social-links"] {
+    border-top: 2px solid #c9a7b5;
+    border-bottom: 2px solid #c9a7b5;
+    padding: 25px 0;
+}
+
+nav h3 {
+    color: #514348;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.social-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #c9a7b5;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-list a:hover {
+    background: #514348;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(81, 67, 72, 0.3);
+}
+
+.social-list a:focus {
+    outline: 3px solid #514348;
+    outline-offset: 2px;
+}
+
+/* Lists section */
+.lists-container {
+    display: grid;
+    gap: 30px;
+}
+
+section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #c9a7b5;
+}
+
+section h3 {
+    color: #514348;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+section ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+section li {
+    padding: 10px 15px;
+    background: #ffffff;
+    border-radius: 6px;
+    color: #514348;
+    position: relative;
+    padding-left: 35px;
+    box-shadow: 0 2px 5px rgba(81, 67, 72, 0.1);
+}
+
+section li::before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    color: #c9a7b5;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+section[aria-labelledby="hobbies-heading"] li::before {
+    content: "✓";
+}
+
+section[aria-labelledby="dislikes-heading"] li::before {
+    content: "✗";
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .profile-content {
+        grid-template-columns: 250px 1fr;
+        gap: 40px;
+        padding: 50px;
+        align-items: start;
+    }
+
+    header {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 40px;
+        text-align: left;
+        align-items: center;
+    }
+
+    figure {
+        margin: 0;
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2[data-testid="test-user-name"] {
+        font-size: 2.5rem;
+    }
+
+    .bio-section {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    p[data-testid="test-user-bio"] {
+        margin: 0;
+        max-width: none;
+    }
+
+    nav[data-testid="test-user-social-links"] {
+        grid-column: 1 / -1;
+    }
+
+    .lists-container {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .social-list {
+        gap: 20px;
+    }
+
+    .social-list a {
+        padding: 12px 24px;
+    }
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+    outline: 3px solid #514348;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    article[data-testid="test-profile-card"] {
+        box-shadow: none;
+    }
+}
