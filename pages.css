@@ -1,6 +1,4 @@
-/* ===================================
-   NAVIGATION STYLES
-   =================================== */
+/*NAVIGATION STYLES*/
 
 .top-nav {
   background: #514348;
@@ -43,9 +41,7 @@
   background: #c9a7b5;
 }
 
-/* ===================================
-   PAGE LAYOUT
-   =================================== */
+/*PAGE LAYOUT*/
 
 .content-page {
   background: #ffffff;
@@ -63,9 +59,7 @@
   text-align: center;
 }
 
-/* ===================================
-   ABOUT PAGE STYLES
-   =================================== */
+/* About page stylings  */
 
 .about-section {
   margin-bottom: 40px;
@@ -131,10 +125,8 @@
   font-weight: 600;
   margin-top: 20px;
 }
-
-/* ===================================
-   CONTACT PAGE STYLES
-   =================================== */
+/* 
+Contact page stylings */
 
 .contact-intro {
   text-align: center;
@@ -192,9 +184,7 @@
 }
 */
 
-/* ===================================
-   ERROR & SUCCESS MESSAGES
-   =================================== */
+/* Error and success messages styling  */
 
  .error-message {
   display: block;
@@ -229,9 +219,7 @@
   }
 }
 
-/* ===================================
-   BUTTONS
-   =================================== */
+/* Buttons styling */
 
 .page-actions {
   display: flex;
@@ -286,19 +274,8 @@
   outline-offset: 2px;
 }
 
-/* Call-to-Action Buttons (for index page) */
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 2px solid #c9a7b5;
-}
 
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
+/* Responsiveness */
 
 @media (max-width: 768px) {
   .content-page {
