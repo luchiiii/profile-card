@@ -1,0 +1,337 @@
+/* ===================================
+   NAVIGATION STYLES
+   =================================== */
+
+.top-nav {
+  background: #514348;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #c9a7b5;
+}
+
+.nav-link:focus {
+  outline: 3px solid #c9a7b5;
+  outline-offset: 2px;
+}
+
+.nav-link.active {
+  background: #c9a7b5;
+}
+
+/* ===================================
+   PAGE LAYOUT
+   =================================== */
+
+.content-page {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(81, 67, 72, 0.3);
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-page h1 {
+  color: #514348;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ===================================
+   ABOUT PAGE STYLES
+   =================================== */
+
+.about-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.about-section:last-of-type {
+  border-bottom: none;
+}
+
+.about-section h2 {
+  color: #c9a7b5;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: #514348;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Goals and Confidence Lists */
+.goals-list,
+.confidence-list {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.goals-list li,
+.confidence-list li {
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-left: 4px solid #c9a7b5;
+  border-radius: 6px;
+  color: #514348;
+  line-height: 1.6;
+}
+
+.confidence-list li strong {
+  color: #c9a7b5;
+}
+
+/* Future Note Box */
+.future-note {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #c9a7b5;
+  line-height: 1.8;
+}
+
+.future-note p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  font-style: italic;
+  color: #c9a7b5;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* ===================================
+   CONTACT PAGE STYLES
+   =================================== */
+
+.contact-intro {
+  text-align: center;
+  color: #514348;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: #514348;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.required {
+  color: #c9a7b5;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c9a7b5;
+  box-shadow: 0 0 0 3px rgba(201, 167, 181, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+*/
+
+/* ===================================
+   ERROR & SUCCESS MESSAGES
+   =================================== */
+
+ .error-message {
+  display: block;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  min-height: 20px;
+}
+
+.input-error {
+  border-color: #d32f2f !important;
+}
+
+.success-message {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.page-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #c9a7b5;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #514348;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(81, 67, 72, 0.3);
+}
+
+.btn-primary:focus {
+  outline: 3px solid #514348;
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #514348;
+  border: 2px solid #c9a7b5;
+}
+
+.btn-secondary:hover {
+  background: #c9a7b5;
+  color: #ffffff;
+}
+
+.btn-secondary:focus {
+  outline: 3px solid #514348;
+  outline-offset: 2px;
+}
+
+/* Call-to-Action Buttons (for index page) */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #c9a7b5;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .content-page {
+    padding: 30px 20px;
+  }
+
+  .content-page h1 {
+    font-size: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page-actions,
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .cta-buttons {
+    grid-column: 1 / -1;
+  }
+}
