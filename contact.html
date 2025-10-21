@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Okwuosa Oluchi</title>
+
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body>
+    <nav class="top-nav" role="navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="contact.html" class="nav-link active" aria-current="page"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <div class="card-wrapper">
+      <main class="content-page">
+        <h1>Contact Us</h1>
+
+        <p class="contact-intro">
+          Have a question or want to work together? I'd love to hear from you!
+          Fill out the form below and I'll get back to you as soon as possible.
+        </p>
+
+        <form id="contactForm" class="contact-form">
+          <!-- Success Message -->
+          <div
+            id="successMessage"
+            data-testid="test-contact-success"
+            class="success-message"
+            role="alert"
+            aria-live="polite"
+            style="display: none"
+          >
+            <strong>Success!</strong> Your message has been sent successfully.
+            I'll get back to you soon!
+          </div>
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="contactName"
+              >Full Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="contactName"
+              name="name"
+              data-testid="test-contact-name"
+              required
+              aria-required="true"
+              aria-describedby="errorName"
+            />
+            <span
+              id="errorName"
+              data-testid="test-contact-error-name"
+              class="error-message"
+            ></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="contactEmail"
+              >Email <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              id="contactEmail"
+              name="email"
+              data-testid="test-contact-email"
+              required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+              title="Please enter a valid email (e.g., name@example.com)"
+              aria-required="true"
+              aria-describedby="errorEmail"
+            />
+            <span
+              id="errorEmail"
+              data-testid="test-contact-error-email"
+              class="error-message"
+            ></span>
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="contactSubject"
+              >Subject <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="contactSubject"
+              name="subject"
+              data-testid="test-contact-subject"
+              required
+              aria-required="true"
+              aria-describedby="errorSubject"
+            />
+            <span
+              id="errorSubject"
+              data-testid="test-contact-error-subject"
+              class="error-message"
+            ></span>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="contactMessage"
+              >Message <span class="required">*</span></label
+            >
+            <textarea
+              id="contactMessage"
+              name="message"
+              data-testid="test-contact-message"
+              rows="6"
+              required
+              minlength="10"
+              title="Message must be at least 10 characters"
+              aria-required="true"
+              aria-describedby="errorMessage"
+            ></textarea>
+            <span
+              id="errorMessage"
+              data-testid="test-contact-error-message"
+              class="error-message"
+            ></span>
+          </div>
+
+          <button
+            type="submit"
+            data-testid="test-contact-submit"
+            class="btn-primary"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <div class="page-actions">
+          <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+      </main>
+    </div>
+
+    <script src="contact.js"></script>
+  </body>
+</html>
