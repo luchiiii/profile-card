@@ -186,6 +186,7 @@ section[aria-labelledby="dislikes-heading"] li::before {
   content: "✗";
 }
 
+/* CTA STYLES  */
 .cta-buttons {
   display: flex;
   gap: 15px;
@@ -226,13 +227,6 @@ section[aria-labelledby="dislikes-heading"] li::before {
 .btn-secondary:hover {
   background: #c9a7b5;
   color: #ffffff;
-}
-
-.trademark {
-  text-align: center;
-  font-size: 14px;
-  color: #514348;
-  margin-top: 20px;
 }
 
 /* Responsiveness */
